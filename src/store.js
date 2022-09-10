@@ -12,6 +12,9 @@ const reducer = (state = initialState, action)=> {
   else if(action.type === 'SET_DEPARTMENTS'){
     state = {...state, departments: action.departments };
   }
+  else if(action.type === 'NEW_USER'){
+    state = {...state, users: [...state.users, action.user]}; 
+  }
   return state;
 };
 

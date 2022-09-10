@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import store from './store';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import Departments from './Departments';
+import Users from './Users';
 
 const root = createRoot(document.querySelector('#root'));
 
@@ -45,6 +47,10 @@ const App = ()=> {
         We currently have { users.length } users!
         We currently have { departments.length } departments!
       </div>
+      <main>
+        <Departments />
+        <Users />
+      </main>
     </div>
   );
 };
